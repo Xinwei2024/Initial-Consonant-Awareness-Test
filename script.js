@@ -40,7 +40,7 @@ let totalTime = 40;  // 倒计时总时长
 
 document.addEventListener("DOMContentLoaded", function() {
     // 页面加载完成后显示图片（指导语），并准备好表格
-    displayImage("image.png");  // 显示指导语的图片（你可以替换为实际的指导语）
+    displayImage("/image.png");  // 显示指导语的图片（你可以替换为实际的指导语）
     
     // 监听按键事件，只有按下空格键时才开始进入练习或测试
     document.addEventListener("keydown", function(event) {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // 显示图片
 function displayImage(imageSrc) {
     let imageElement = document.createElement("img");
-    imageElement.src = "/image.png";  // 这里传入图片路径
+    imageElement.src = imageSrc;  // 这里传入图片路径
     imageElement.alt = "实验指导语";
     imageElement.id = "experimentImage"; // 给图片一个ID以便以后隐藏
     document.body.appendChild(imageElement);
