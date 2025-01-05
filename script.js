@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
 // 显示图片
 function displayImage(imageSrc) {
     let imageElement = document.createElement("img");
-    imageElement.src = "image.png";  // 这里传入图片路径
+    imageElement.src = "./image.png";  // 这里传入图片路径
     imageElement.alt = "实验指导语";
     imageElement.id = "experimentImage"; // 给图片一个ID以便以后隐藏
     document.body.appendChild(imageElement);
