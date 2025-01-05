@@ -40,7 +40,7 @@ let totalTime = 40;  // 倒计时总时长
 
 document.addEventListener("DOMContentLoaded", function() {
     // 页面加载完成后显示图片（指导语），并准备好表格
-    displayImage("/image.png");  // 显示指导语的图片（你可以替换为实际的指导语）
+    displayImage("image.png");  // 显示指导语的图片（你可以替换为实际的指导语）
     
     // 监听按键事件，只有按下空格键时才开始进入练习或测试
     document.addEventListener("keydown", function(event) {
