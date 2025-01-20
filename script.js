@@ -39,8 +39,13 @@ let testCorrectAnswers = [
 let totalTime = 40;  // 倒计时总时长
 
 document.addEventListener("DOMContentLoaded", function() {
+    userFileName = prompt("请输入保存CSV文件的名称（不需要扩展名）", "results");
+if (!userFileName) {  // 如果用户没有输入文件名，使用默认值
+    userFileName = "results";
+}
+
     // 页面加载完成后显示图片（指导语），并准备好表格
-    displayImage("image.png");  // 显示指导语的图片（你可以替换为实际的指导语）
+    displayImage("image.png");  // 显示指导语的图片
     
     // 监听按键事件，只有按下空格键时才开始进入练习或测试
     document.addEventListener("keydown", function(event) {
@@ -221,6 +226,6 @@ function exportCSV(detailedResults, correctCount, incorrectCount) {
     let encodedUri = encodeURI(csvContent);
     let link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "results.csv");
+    link.setAttribute("download", `${userFileName}.csv`);  // 使用用户输入的文件名保存
     link.click();
 }
